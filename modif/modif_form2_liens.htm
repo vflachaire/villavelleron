@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="robots" content="noindex">
+<title>Modif Villa Velleron - Liens</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="_styles.css" rel="stylesheet" type="text/css">
+<script src="/tinymce/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+    plugins: [
+        "advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste responsivefilemanager"
+    ],
+   toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+   toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  |  code ",
+
+	external_filemanager_path:"/filemanager/",
+   filemanager_title:"Responsive Filemanager" ,
+   external_plugins: { "filemanager" : "/filemanager/plugin.min.js"}
+});
+</script>
+<script language="JavaScript" type="text/javascript">
+function check() {
+  if (document.form.motdepasse.value == '') {
+    alert('N\'oubliez pas le mot de passe !');
+    document.form.motdepasse.focus();
+    return false;
+  }
+  return true;
+}
+</script>
+</head>
+<body>
+<div align="center"> 
+<? include("_titre-de.php") ?> 
+<? include ("_menu.php") ?>
+  <form method="post" action="<?print($action_form)?>" onSubmit="return check()" name="form">
+    <? include ("modif_menu.htm") ?>
+   <p align="center" class="texte_16"><strong>&quot;liens&quot; en fran&ccedil;ais</strong></p>
+          <p align="center">
+            <textarea name="champ_1_new" cols="120" rows="30" class="cadre_textearea" id="champ_1_new"><?print(stripslashes($champ_1))?></textarea>
+            <br />
+            <input name="button" type="submit" id="button5" value="modifier" />
+          </p>
+          <p align="center" class="texte_16"><br />
+        </p>
+</form>
+        
+<? include ("_menu.php") ?>
+</div>
+</body>
+</html>

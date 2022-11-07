@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Maison en location de vacances en Provence - Villa Velleron</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="Maison en location de vacances à la Villa Velleron, près de l'Isle sur la Sorgue, Avignon, le Luberon, le Mont Ventoux.">
+<link href="_styles.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript"> 
+    if (top != self) { 
+	    top.location.href = location.href; 
+    } 
+</script>
+
+<script type="text/javascript" language="JavaScript"> 
+
+function affich_Studio(nodiapo) 
+        { 
+            document.Studio.src="photos/Studio_" + nodiapo + ".jpg";
+            //alert("photos/Studio_" + nodiapo + ".jpg")
+        }
+</script>
+
+<!--#include virtual="_analytics.html"-->
+</head>
+
+<body>
+<!--#include virtual="_menu-new.php"--> 
+<!--#include virtual="_header-fr.htm"--> 
+
+<div class="main chambres">
+  <div class="block" id="block1">
+     <h3>Studio-appartement de vacances</h3>
+     <div class="chambre hide">
+       <img src="photos/Studio_01.jpg" alt="Appartement de vacances Villa Velleron"  name="Studio"  id="Studio">
+     </div>
+     <div class="vignettes">
+         <img src="photos/Studio_01.jpg" onMouseOver="affich_Studio('01')">
+         <img src="photos/Studio_02.jpg" onMouseOver="affich_Studio('02')">
+         <img src="photos/Studio_03.jpg" onMouseOver="affich_Studio('03')">
+         <img src="photos/Studio_04.jpg" onMouseOver="affich_Studio('04')">
+         <img src="photos/Studio_05.jpg" onMouseOver="affich_Studio('05')">
+         <img src="photos/Studio_06.jpg" onMouseOver="affich_Studio('06')">
+         <p class="survol hide">passer le curseur sur la vignette pour l'agrandir</p>
+     </div>
+     <!--#include virtual="modif2.php?affich=champ_1&page=location"-->
+
+ </div>
+</div>
+<!--#include virtual="_footer.php"--> 
+</body>
+</html>

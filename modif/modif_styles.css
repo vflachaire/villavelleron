@@ -1,0 +1,190 @@
+body {
+	background-color: #FFFFFF;
+	color: #787878;
+	margin: 0px;
+	padding: 0px;
+	font-family: Ubuntu, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+a {
+	color: #44403E;
+}
+
+h1 {
+	margin: 0;
+}
+h2 {
+	color: #4E4544;
+	font-size: 28px;
+	margin:12px auto;
+	padding:4px 12px;
+	font-weight: 300;
+	text-align:center;
+}
+h3 {
+	color: #848484;
+	font-size: 30px;
+	margin:12px auto;
+	font-weight: 300;
+	/*border:solid 1px red;*/
+	text-align:center;
+}
+h3::before {
+	content:"";
+	width:45px;
+   	height:45px;
+	display:inline-block;
+	background:url(images/coeur-VV.png);
+	position:relative;
+	background-size:100%;
+	top:10px;
+	left:-20px;
+	}
+
+h4 {font-size:24px;font-weight:400;text-align:center}
+
+/*** Accueil ***/
+
+.accueil-texte p {
+	max-width:600px;
+	margin:12px auto;
+	text-align:justify;
+	line-height: 24px;
+}
+.accueil-photo img {
+	display:block;
+	max-width:700px;
+	margin:40px auto;
+}
+div.image {text-align:center;padding:10px 0}
+div.image img {max-width:800px;height:auto;margin:auto}
+
+.cadre_lightbox {
+	position: relative;
+	width: 100%;
+	max-width:1000px;
+	margin: 40px  auto;
+	border: solid 0px green;
+	border-spacing: 2px 0px;
+	box-sizing: border-box;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap:10px;
+}
+
+.cadre_lightbox > div {
+	display: inline-block;
+	width:33.3%;
+	max-width:300px;
+	position: relative;
+	height: 100%;
+	border: solid 1px white;
+	overflow: hidden;
+	vertical-align: middle;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.cadre_lightbox > div h3 {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	color: #fff !important;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0));
+	padding-top:2%;
+	padding-bottom: 2%;
+	z-index: 20;
+	font-size: 1.4em;
+	margin: 0;
+	transition: all 0.6s;
+}
+
+.cadre_lightbox>div:hover h3 {
+	background-color: rgba(0, 0, 0, 0);
+	font-size: 1.8em;
+}
+
+.cadre_lightbox>div h3 a {
+	color: white !important;
+	text-decoration: none;
+}
+
+.cadre_lightbox>div h3::before {
+	display:none;
+}
+.cadre_lightbox div img {
+	width: 100%;
+	max-width:350px;
+	height: auto;
+	position: relative;
+	display: block;
+	max-height: 400px;
+	margin: auto;
+}
+
+.cadre_lightbox div:hover img {
+	transform: scale(1.05);
+	filter: brightness(0.8);
+	transition: all 0.6s;
+}
+
+/*** Tarifs ***/
+div#cgv li {
+	margin:6px 20px;
+}
+
+/**** OFFRES ****/
+.offres {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	gap:4px;
+	width:100%;
+}
+.offres > div {
+width: calc(30% - 20px);
+min-width:360px;
+margin: 10px 8px;
+background-color: #f1efee;
+text-align: left;
+position: relative;
+padding-bottom: 20px;
+position: relative;
+}
+.offres div img{
+	width:100%;height:auto;
+}
+.offres div h3 {
+	font-size: 1.5em;
+	font-weight: 500;
+	line-height: 1em;
+	margin: 10px 0;
+	padding:0 15px;
+	text-align:center;
+	color: #44403E;
+}
+.offres div h3 > a {
+	text-decoration: none;
+}
+.offres div h3::before {display:none}
+.offres div p {
+	margin-bottom:12px;
+	padding:0 15px;
+	font-size:16px;
+
+}
+.offres div li {
+
+}
+.offres > div > p:last-child  {
+	margin-bottom:60px;
+	background: red;
+}
+.offres > div > p.date  {
+	font-weight:bold;
+}
+.offres  div.descriptionOffre  {
+	margin-bottom:10px;
+}

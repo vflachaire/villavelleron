@@ -1,0 +1,102 @@
+AddType text/html .htm .html
+AddHandler server-parsed .htm .html
+
+#RewriteEngine On 
+#RewriteCond %{HTTP_HOST} ^villavelleron.com
+#RewriteRule (.*) http://www.villavelleron.com/$1 [R=301,L]
+
+# 2021.06.16 
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.villavelleron.com/$1 [R,L]
+
+# 2021.10.30 antivirus
+RewriteEngine On 
+RedirectMatch 403 /wp-admin/
+RedirectMatch 403 /wp-content/
+RedirectMatch 403 /wp-load.php
+RedirectMatch 403 /wp-admin.php
+RedirectMatch 403 /3index
+RedirectMatch 403 /google2d65c7ea00a3f81a.html
+RedirectMatch 403 /index.php
+RedirectMatch 403 /old-index.php
+RedirectMatch 403 /google61808e4f9d53bb49.html
+
+# 2021.11.09 erreur 404
+RewriteEngine On 
+ErrorDocument 400 https://www.villavelleron.com/404.htm
+ErrorDocument 402 https://www.villavelleron.com/404.htm
+ErrorDocument 403 https://www.villavelleron.com/404.htm
+ErrorDocument 404 https://www.villavelleron.com/404.htm
+ErrorDocument 500 https://www.villavelleron.com/404.htm
+
+#ErrorDocument 400 "Oops! We can't find that pesky file. Sorry. 400"
+#ErrorDocument 402 "Oops! We can't find that pesky file. Sorry. 402"
+#ErrorDocument 403 "Oops! We can't find that pesky file. Sorry. 403"
+#ErrorDocument 404 "Oops! We can't find that pesky file. Sorry. 404"
+#ErrorDocument 500 "Oops! We can't find that pesky file. Sorry. 500"
+
+Options +FollowSymlinks
+
+#2019-08-07
+#Redirect  /index_deutsch.htm http://www.villavelleron.com/
+#Redirect  /index_english.htm http://www.villavelleron.com/
+#Redirect  /reservation.php http://www.villavelleron.com/
+#Redirect  /de-reservation.php http://www.villavelleron.com/
+#Redirect  /en-reservation.php http://www.villavelleron.com/
+
+#2018-12-18
+#Redirect permanent /actualite.htm http://www.villavelleron.com/maison-location.htm
+#Redirect permanent /en-news.htm http://www.villavelleron.com/maison-location.htm
+#Redirect permanent /de-aktuelles.htm http://www.villavelleron.com/maison-location.htm
+
+#Redirect permanent /maison-d-hotes-provence.htm http://www.villavelleron.com/chambresdhotes.htm
+#Redirect permanent /chambres_d_hotes_provence.htm http://www.villavelleron.com/chambresdhotes.htm
+#Redirect permanent /location-vacances-provence.htm http://www.villavelleron.com/appartement.htm
+#Redirect permanent /table-d-hotes-provence.htm http://www.villavelleron.com/tablesdhotes.htm
+#Redirect permanent /provence-luberon-avignon.htm http://www.villavelleron.com/provence.htm
+#Redirect permanent /hotes-villa-velleron.htm http://www.villavelleron.com/acces.htm
+#Redirect permanent /tarifs-acces.htm http://www.villavelleron.com/tarifs.html
+
+#Redirect permanent /index_bed-and-breakfast.htm http://www.villavelleron.com/index_english.htm
+#Redirect permanent /en-guest-house-provence.htm http://www.villavelleron.com/en-guestrooms.htm
+#Redirect permanent /en-bed_and_breakfast_rooms.htm http://www.villavelleron.com/en-guestrooms.htm
+#Redirect permanent /en-vacation-rental-provence.htm http://www.villavelleron.com/en-apartement.htm
+#Redirect permanent /en-dining-provence.htm http://www.villavelleron.com/en-dinner.htm
+#Redirect permanent /en-provence-luberon-avignon.htm http://www.villavelleron.com/en-provence.htm
+#Redirect permanent /en-hosts-villa-velleron.htm http://www.villavelleron.com/en-access.htm
+#Redirect permanent /en-rates-acces.htm http://www.villavelleron.com/en-rates.html
+#Redirect permanent /en-cooking-class.htm http://www.villavelleron.com/en-dinner.htm
+
+#Redirect permanent /index_gaestzimmer.htm http://www.villavelleron.com/index_deutsch.html
+#Redirect permanent /de-haus-provence.htm http://www.villavelleron.com/de-zimmer.htm
+#Redirect permanent /de-gaestezimmer-provence.htm http://www.villavelleron.com/de-zimmer.htm
+#Redirect permanent /de-appartement-provence.htm http://www.villavelleron.com/de-appartement.htm
+#Redirect permanent /de-tafelfreuden-provence.htm http://www.villavelleron.com//de-abendessen.htm
+#Redirect permanent /de-provence-luberon-avignon.htm http://www.villavelleron.com/de-provence.htm
+#Redirect permanent /de-gastgeber-villa-velleron.htm http://www.villavelleron.com/de-anfahrt.htm
+#Redirect permanent /de-preise-lage.htm http://www.villavelleron.com/de-preise.html
+#Redirect permanent /de-kochkurs.htm http://www.villavelleron.com//de-abendessen.htm
+
+ #Redirect permanent /index_camere-d-ospiti.htm http://www.villavelleron.com/index_it.htm
+ #Redirect permanent /it-casa-d-ospiti-provenza.htm http://www.villavelleron.com/index_it.htm
+ #Redirect permanent /it-camere-d-ospiti-provenza.htm http://www.villavelleron.com/index_it.htm
+ #Redirect permanent /it-appartamento-provenza.htm.htm http://www.villavelleron.com/index_it.htm
+ #Redirect permanent /it-tavole-d-ospiti-provenza.htm http://www.villavelleron.com/index_it.htm
+ #Redirect permanent /it-provence-luberon-avignon.htm http://www.villavelleron.com/index_it.htm
+ #Redirect permanent /it-ospiti-villa-velleron.htm http://www.villavelleron.com/index_it.htm
+ #Redirect permanent /it-tariffe-accesso.htm http://www.villavelleron.com/index_it.htm
+ #Redirect permanent /it-reservation.php http://www.villavelleron.com/index_it.htm
+
+ #Redirect permanent /index_gastenkamers.htm http://www.villavelleron.com/index_nl.htm
+ #Redirect permanent /nl-huis-provence.htm http://www.villavelleron.com/index_nl.htm
+ #Redirect permanent /nl-gastenkamers-provence.htm http://www.villavelleron.com/index_nl.htm
+ #Redirect permanent /nl-appartement-provence.htm http://www.villavelleron.com/index_nl.htm
+ #Redirect permanent /nl-dineren-provence.htm http://www.villavelleron.com/index_nl.htm
+ #Redirect permanent /nl-provence-luberon-avignon.htm http://www.villavelleron.com/index_nl.htm
+ #Redirect permanent /nl-gastgevers-villa-velleron.htm http://www.villavelleron.com/index_nl.htm
+ #Redirect permanent /nl-prijzen-routebeschrijving.htm http://www.villavelleron.com/index_nl.htm
+ #Redirect permanent /nl-reservation.php http://www.villavelleron.com/index_nl.htm
+ 
+ #Redirect permanent /index_it.htm http://www.villavelleron.com\/index_english.htm
+ #Redirect permanent /index_nl.htm http://www.villavelleron.com\/index_english.htm

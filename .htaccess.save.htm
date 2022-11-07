@@ -1,0 +1,84 @@
+AddType x-mapp-php5 .php
+AddHandler x-mapp-php5 .php
+
+AddType text/html .htm .html
+AddHandler server-parsed .htm .html
+
+
+
+RewriteEngine On 
+RewriteCond %{HTTP_HOST} ^villavelleron.com
+RewriteRule (.*) http://www.villavelleron.com/$1 [R=301,L]
+
+Options +FollowSymlinks
+
+#2019-08-07
+Redirect  /index_deutsch.htm http://www.villa-velleron.com/
+Redirect  /index_english.htm http://www.villa-velleron.com/
+Redirect  /reservation.php http://www.villa-velleron.com/
+Redirect  /de-reservation.php http://www.villa-velleron.com/
+Redirect  /en-reservation.php http://www.villa-velleron.com/
+
+
+
+#2018-12-18
+Redirect permanent /actualite.htm http://www.villa-velleron.com/maison-location.htm
+Redirect permanent /en-news.htm http://www.villa-velleron.com/maison-location.htm
+Redirect permanent /de-aktuelles.htm http://www.villa-velleron.com/maison-location.htm
+
+
+Redirect permanent /maison-d-hotes-provence.htm http://www.villa-velleron.com/chambresdhotes.htm
+Redirect permanent /chambres_d_hotes_provence.htm http://www.villa-velleron.com/chambresdhotes.htm
+Redirect permanent /location-vacances-provence.htm http://www.villa-velleron.com/appartement.htm
+Redirect permanent /table-d-hotes-provence.htm http://www.villa-velleron.com/tablesdhotes.htm
+Redirect permanent /provence-luberon-avignon.htm http://www.villa-velleron.com/provence.htm
+Redirect permanent /hotes-villa-velleron.htm http://www.villa-velleron.com/acces.htm
+Redirect permanent /tarifs-acces.htm http://www.villa-velleron.com/tarifs.html
+
+Redirect permanent /index_bed-and-breakfast.htm http://www.villa-velleron.com/index_english.htm
+Redirect permanent /en-guest-house-provence.htm http://www.villa-velleron.com/en-guestrooms.htm
+Redirect permanent /en-bed_and_breakfast_rooms.htm http://www.villa-velleron.com/en-guestrooms.htm
+Redirect permanent /en-vacation-rental-provence.htm http://www.villa-velleron.com/en-apartement.htm
+Redirect permanent /en-dining-provence.htm http://www.villa-velleron.com/en-dinner.htm
+Redirect permanent /en-provence-luberon-avignon.htm http://www.villa-velleron.com/en-provence.htm
+Redirect permanent /en-hosts-villa-velleron.htm http://www.villa-velleron.com/en-access.htm
+Redirect permanent /en-rates-acces.htm http://www.villa-velleron.com/en-rates.html
+Redirect permanent /en-cooking-class.htm http://www.villa-velleron.com/en-dinner.htm
+
+Redirect permanent /index_gaestzimmer.htm http://www.villa-velleron.com/index_deutsch.html
+Redirect permanent /de-haus-provence.htm http://www.villa-velleron.com/de-zimmer.htm
+Redirect permanent /de-gaestezimmer-provence.htm http://www.villa-velleron.com/de-zimmer.htm
+Redirect permanent /de-appartement-provence.htm http://www.villa-velleron.com/de-appartement.htm
+Redirect permanent /de-tafelfreuden-provence.htm http://www.villa-velleron.com//de-abendessen.htm
+Redirect permanent /de-provence-luberon-avignon.htm http://www.villa-velleron.com/de-provence.htm
+Redirect permanent /de-gastgeber-villa-velleron.htm http://www.villa-velleron.com/de-anfahrt.htm
+Redirect permanent /de-preise-lage.htm http://www.villa-velleron.com/de-preise.html
+Redirect permanent /de-kochkurs.htm http://www.villa-velleron.com//de-abendessen.htm
+
+ Redirect permanent /index_camere-d-ospiti.htm http://www.villa-velleron.com/index_it.htm
+ Redirect permanent /it-casa-d-ospiti-provenza.htm http://www.villa-velleron.com/index_it.htm
+ Redirect permanent /it-camere-d-ospiti-provenza.htm http://www.villa-velleron.com/index_it.htm
+ Redirect permanent /it-appartamento-provenza.htm.htm http://www.villa-velleron.com/index_it.htm
+ Redirect permanent /it-tavole-d-ospiti-provenza.htm http://www.villa-velleron.com/index_it.htm
+ Redirect permanent /it-provence-luberon-avignon.htm http://www.villa-velleron.com/index_it.htm
+ Redirect permanent /it-ospiti-villa-velleron.htm http://www.villa-velleron.com/index_it.htm
+ Redirect permanent /it-tariffe-accesso.htm http://www.villa-velleron.com/index_it.htm
+ Redirect permanent /it-reservation.php http://www.villa-velleron.com/index_it.htm
+
+ Redirect permanent /index_gastenkamers.htm http://www.villa-velleron.com/index_nl.htm
+ Redirect permanent /nl-huis-provence.htm http://www.villa-velleron.com/index_nl.htm
+ Redirect permanent /nl-gastenkamers-provence.htm http://www.villa-velleron.com/index_nl.htm
+ Redirect permanent /nl-appartement-provence.htm http://www.villa-velleron.com/index_nl.htm
+ Redirect permanent /nl-dineren-provence.htm http://www.villa-velleron.com/index_nl.htm
+ Redirect permanent /nl-provence-luberon-avignon.htm http://www.villa-velleron.com/index_nl.htm
+ Redirect permanent /nl-gastgevers-villa-velleron.htm http://www.villa-velleron.com/index_nl.htm
+ Redirect permanent /nl-prijzen-routebeschrijving.htm http://www.villa-velleron.com/index_nl.htm
+ Redirect permanent /nl-reservation.php http://www.villa-velleron.com/index_nl.htm
+ 
+ Redirect permanent /index_it.htm http://www.villa-velleron.com\/index_english.htm
+ Redirect permanent /index_nl.htm http://www.villa-velleron.com\/index_english.htm
+ 
+RewriteEngine On 
+RewriteCond %{HTTP_REFERER} semalt\.com [NC] 
+RewriteCond %{HTTP_REFERER} buttons\-for\-website\.com
+RewriteRule .* - [F]

@@ -1,0 +1,5 @@
+AuthName "Page de modifications"
+AuthType Basic
+AuthUserFile "/home/lrajtnj/www/modif/.htpasswd"
+require valid-user
+

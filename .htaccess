@@ -1,0 +1,71 @@
+AddType text/html .htm .html
+AddHandler server-parsed .htm .html
+
+#RewriteEngine On 
+#RewriteCond %{HTTP_HOST} ^villavelleron.com
+#RewriteRule (.*) https://www.villavelleron.com/$1 [R=301,L]
+
+# 2021.06.16 
+#RewriteEngine On
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://www.villavelleron.com/$1 [R,L]
+
+
+
+# 2021.10.30 antivirus
+RewriteEngine On 
+RedirectMatch 403 /wp-admin/
+RedirectMatch 403 /wp-content/
+RedirectMatch 403 /wp-load.php
+RedirectMatch 403 /wp-admin.php
+RedirectMatch 403 /3index.php
+RedirectMatch 403 /google2d65c7ea00a3f81a.html
+#RedirectMatch 403 /index.php
+RedirectMatch 403 /old-index.php
+RedirectMatch 403 /google61808e4f9d53bb49.html
+RedirectMatch 403 /admin.php
+
+# Redirection https
+RewriteEngine on
+RewriteCond %{SERVER_PORT} 80 [OR]
+RewriteCond %{HTTP_HOST} ^villavelleron\.com$ [NC]
+RewriteRule ^(.*) https://www.villavelleron.com/$1 [QSA,L,R=301]
+
+# 2021.11.09 erreur 404
+#RewriteEngine On 
+#ErrorDocument 400 https://www.villavelleron.com/404.htm
+#ErrorDocument 402 https://www.villavelleron.com/404.htm
+#ErrorDocument 403 https://www.villavelleron.com/404.htm
+#ErrorDocument 404 https://www.villavelleron.com/404.htm
+#ErrorDocument 500 https://www.villavelleron.com/404.htm
+
+#ErrorDocument 400 "Oops! We can't find that pesky file. Sorry. 400"
+#ErrorDocument 402 "Oops! We can't find that pesky file. Sorry. 402"
+#ErrorDocument 403 "Oops! We can't find that pesky file. Sorry. 403"
+#ErrorDocument 404 "Oops! We can't find that pesky file. Sorry. 404"
+#ErrorDocument 500 "Oops! We can't find that pesky file. Sorry. 500"
+
+Options +FollowSymlinks
+
+#2021-11-15
+Redirect permanent /maison-d-hotes-provence.htm https://www.villavelleron.com/fr-chambresdhotes
+Redirect permanent /chambresdhotes.htm https://www.villavelleron.com/fr-chambresdhotes
+Redirect permanent /location-vacances-provence.htm https://www.villavelleron.com/appartement.htm
+Redirect permanent /provence-luberon-avignon.htm https://www.villavelleron.com/fr-provence
+Redirect permanent /hotes-villa-velleron.htm https://www.villavelleron.com/
+Redirect permanent /tarifs-acces.htm https://www.villavelleron.com/fr-tarifs
+Redirect permanent /tarifs.html https://www.villavelleron.com/fr-tarifs
+Redirect permanent /acces.htm https://www.villavelleron.com/fr-acces
+Redirect permanent /tablesdhotes.htm https://www.villavelleron.com/fr-tabledhotes
+Redirect permanent /table-d-hotes-provence.htm https://www.villavelleron.com/fr-tabledhotes
+Redirect permanent /location-vacances-provence.htm https://www.villavelleron.com/fr-gite
+Redirect permanent /appartement.htm https://www.villavelleron.com/fr-gite
+Redirect permanent /reservation.php https://www.villavelleron.com/fr-reservation.php
+Redirect permanent /liens.php https://www.villavelleron.com/
+
+Redirect permanent /links.php https://www.villavelleron.com/
+
+Redirect permanent /index_it.htm https://www.villavelleron.com/
+Redirect permanent /index_nl.htm https://www.villavelleron.com/
+
+

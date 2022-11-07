@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="robots" content="noindex">
+  <title>Modif Villa Velleron - Chambres</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="../_styles.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="tinymce/js/tinymce/tinymce.min.js"></script>
+  <script type="text/javascript">
+  tinymce.init({
+      selector: "textarea",
+      plugins: [
+          "advlist autolink lists link image charmap print preview anchor",
+          "searchreplace visualblocks code fullscreen",
+          "insertdatetime media table contextmenu paste autoresize"
+      ],
+     toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect | link unlink anchor | image media | forecolor backcolor | code ",
+     width : 400,
+     toolbar_items_size: 'small',
+     content_css: 'modif/modif_styles.css',
+     document_base_url: '//www.villavelleron.com/',
+  });
+  </script>
+</head>
+<body class="modif">
+<div> 
+  <? include("../_header-fr.htm") ?> 
+  <? include ("../_menu-new.php") ?>
+
+  <form method="post" action="<?print($action_form)?>" onSubmit="return check()" name="form">
+    <? include ("modif_menu2.htm") ?>
+    <table border="0" cellpadding="6">
+            <tr>
+              <td><p>Chambre lou Solei</p>
+                <textarea name="champ_1_new" cols="40" rows="6" class="cadre_textearea" id="champ_1_new"><?print(stripslashes($champ_1))?></textarea></td>
+              <td>
+                <p>Room lou Solei</p>
+                <textarea name="champ_6_new" cols="40" rows="6" class="cadre_textearea" id="champ_6_new"><?print(stripslashes($champ_6))?></textarea></td>
+              <td><p>Zimmer lou Solei</p>
+                <textarea name="champ_11_new" cols="40" rows="6" class="cadre_textearea" id="champ_11_new"><?print(stripslashes($champ_11))?></textarea></td>
+            </tr>
+            <tr>
+              <td><p>Chambre Luberon</p>
+                <textarea name="champ_2_new" cols="40" rows="6" class="cadre_textearea" id="champ_2_new"><?print(stripslashes($champ_2))?></textarea></td>
+              <td><p>Room Luberon</p>
+                <textarea name="champ_7_new" cols="40" rows="6" class="cadre_textearea" id="champ_7_new"><?print(stripslashes($champ_7))?></textarea></td>
+              <td><p>Zimmer Luberon</p>
+                <textarea name="champ_12_new" cols="40" rows="6" class="cadre_textearea" id="champ_12_new"><?print(stripslashes($champ_12))?></textarea></td>
+            </tr>
+            <tr>
+              <td><p>Suite Naturelle FR</p>
+                <textarea name="champ_3_new" cols="40" rows="6" class="cadre_textearea" id="champ_3_new"><?print(stripslashes($champ_3))?></textarea></td>
+              <td><p>Suite Naturelle EN</p>
+                <textarea name="champ_8_new" cols="40" rows="6" class="cadre_textearea" id="champ_8_new"><?print(stripslashes($champ_8))?></textarea></td>
+              <td><p>Suite Naturelle DE</p>
+                <textarea name="champ_13_new" cols="40" rows="6" class="cadre_textearea" id="champ_13_new"><?print(stripslashes($champ_13))?></textarea></td>
+            </tr>
+            <tr>
+              <td><p>Chambre Mezzanine</p>
+                <textarea name="champ_4_new" cols="40" rows="6" class="cadre_textearea" id="champ_4_new"><?print(stripslashes($champ_4))?></textarea></td>
+              <td><p>Room Mezzanine</p>
+                <textarea name="champ_9_new" cols="40" rows="6" class="cadre_textearea" id="champ_9_new"><?print(stripslashes($champ_9))?></textarea></td>
+              <td><p>Zimmer Mezzanine</p>
+                <textarea name="champ_14_new" cols="40" rows="6" class="cadre_textearea" id="champ_14_new"><?print(stripslashes($champ_14))?></textarea></td>
+            </tr>
+            <tr>
+              <td><p>Chambre Bleu Blanc</p>
+                <textarea name="champ_5_new" cols="40" rows="6" class="cadre_textearea" id="champ_5_new"><?print(stripslashes($champ_5))?></textarea></td>
+              <td><p>Room Bleu Blanc</p>
+                <textarea name="champ_10_new" cols="40" rows="6" class="cadre_textearea" id="champ_10_new"><?print(stripslashes($champ_10))?></textarea></td>
+              <td><p>Zimmer Bleu Blanc</p>
+                <textarea name="champ_15_new" cols="40" rows="6" class="cadre_textearea" id="champ_15_new"><?print(stripslashes($champ_15))?></textarea></td>
+            </tr>
+          </table>
+          <p align="center"><input name="button" type="submit" id="button5" value="modifier" />
+          </p>
+        
+</form>
+        
+
+</div>
+</body>
+</html>

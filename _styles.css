@@ -1,0 +1,1473 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+
+
+/*** MENU PRINCIPAL HAMBURGER ***/
+
+.navbar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	background: #a9b94b;
+	background: #7B6C6A;
+	/*background: #75977e;*/
+	z-index: 5;
+	margin: 0;
+	padding:  0;
+	clear: both;
+	font-weight: normal;
+	text-align: center;
+	font-size: 16px;
+	line-height: 34px;
+	z-index:20;
+	width:100%;
+	color: #fff;
+}
+nav > div {
+	float:left;
+	padding:0 8px;
+	text-align: left;
+	display:block;
+	vertical-align: middle;
+}
+nav > div > div#titre-menu {
+    display:inline-block;
+    text-transform: uppercase;
+    line-height: 34px;
+	transition: all 0.4s;
+	font-size:16px;
+	color:#524847;
+	display:none;
+}
+nav > div > div#titre-menu a {
+	font-family: Georgia, "Times New Roman", Times, serif;
+    text-decoration:none;
+    color:inherit;
+    font-weight:normal;
+	transition:all 0.4s;
+}
+nav > div > div#titre-menu a:hover {
+    text-decoration:none;
+	text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+    text-shadow:none; 
+	letter-spacing: 0.05em;
+	color:white;
+}
+nav  div.menu-langues {
+	font-size:16px;
+	margin:auto 10px;
+}
+nav  div#contact_accueil {
+	font-size:14px;
+	font-weight:300;
+}
+
+nav > div > form#reservation_accueil {
+    border: solid 0px;
+    width: auto;
+    display: block;
+    padding: 0px;
+	font-size:14px !important;
+	line-height:18px;
+	display:block;
+	clear:both;
+	display:none;
+}
+
+nav > div > form#reservation_accueil a {
+    color: inherit;
+	margin-right:20px;
+	font-size:18px !important;
+}
+nav > div > form#reservation_accueil a:hover {
+    text-decoration:underline;
+}
+
+nav div.icones {
+	display: inline-block;
+	border:solid 0px red;
+	width:40px;
+	vertical-align: top;
+}
+
+nav div.icones:hover {
+
+}
+
+nav div.icones a {
+	width: auto;
+}
+
+nav div.icones img {
+	height: 26px;
+	margin:auto 4px;
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+	transition: 0.2s;
+}
+nav div.icones img:hover {
+	transform: scale(1.5);
+}
+
+nav > ul {
+	padding: 0;
+	margin: 0;
+	margin-right: 4px;
+	display: flex;
+	justify-content: flex-end;
+	border: solid 0px white;
+	list-style-type: none;
+	border: solid 0px red;
+	flex-flow: row;
+	flex-wrap: wrap;
+	float:right;
+	z-index:10;
+}
+
+nav ul li {
+	list-style: none;
+	font-size: 16px;
+	white-space: nowrap;
+	text-align: center;
+	z-index: 15;
+	display: inline-block;
+	position: relative;
+	border-bottom: solid 0px white;
+	margin: 0px;
+	padding: 0px;
+	text-align:center;
+}
+
+nav li:hover {}
+
+nav > ul > li {
+	width: auto;
+	/* 100% / 7 elements = 14.28% */
+	/*width:90px;*/
+	/* minimum pour ne pas dÃ©placer les Ã©lÃ©ments au survol et apparition du menu dÃ©roulant */
+	position:relative;
+	border:solid 0px;
+	text-align:center;
+}
+nav > ul > li:hover, nav ul li h2 {
+	background: rgb(0, 0, 0, 0.2);
+}
+
+nav > ul > li > a,
+nav > ul > li > span, nav ul li h2 {
+	text-decoration: none;
+	width: auto;
+	padding: 2px 4px;
+	position: relative;
+	overflow: visible;
+	font-size:16px;
+    color:#fff;
+	margin:0;
+	line-height: 30px;
+	font-weight:normal;
+	word-spacing: -.2ch;
+}
+
+nav a {
+	border-bottom: 1px solid transparent;
+	transition: border 0.5s ease;
+    color:#fff;
+}
+
+nav a:hover {
+}
+
+nav li.reserver a {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav li.icones {
+	display: flex;
+	justify-content: center;
+	flex-wrap: nowrap;
+	width:auto;
+	align-items: center;
+	margin:auto 2px;
+}
+
+nav  li.icones:hover {
+	background-color: rgba(255, 255, 255, 0.0);
+}
+
+nav li.icones a {
+	width: auto;
+}
+
+nav li.icones img {
+	height: 20px;
+	width: auto;
+	display: block;
+	vertical-align: middle;
+	transition: 0.2s;
+}
+nav li.icones img:hover {
+	transform: scale(1.5);
+}
+
+nav > ul > li > span span,
+nav > ul > li > a span {
+	position: relative;
+	font-family: ETmodules;
+	font-size: 10px;
+	font-weight: 800;
+	top: 5px;
+	right: 2px;
+	display:none;
+}
+
+nav > ul > li > a:hover span,
+nav > ul > li > a span:hover {
+	text-decoration: none !important;
+}
+
+nav > ul > li > a span:after { content:' \002228'; font-size:0.7em} /* Changer ce afin de changer le symbole du menu dÃ©roulant */
+nav > ul > li > a:only-child:after { content: ''; }
+ 
+/** Sous menu ***/
+nav > ul > li > ul {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	background-color: #fff ;
+	width:auto;
+	position:relative;
+	top:0px;left:0;
+	height:0;
+	max-height: 0;
+	transition: max-height 0.8s ease;
+	overflow: hidden;
+	width:150px;
+	border:solid 0px red;
+}
+nav > ul > li > ul > li {
+	width: auto;
+	line-height: 36px;
+	background-color: #fff ;
+	text-align:left;
+}
+
+nav > ul > li:hover > ul {
+	
+	border-left:solid 0px #333;
+	border:solid 0px red;
+	overflow: visible;
+}
+nav > ul > li:hover > ul li {
+
+	border-left:solid 0px #333;
+}
+
+nav > ul > li > ul > li a {
+	text-decoration: none;
+	background-color: #fff ;
+	padding-left:12px;
+
+}
+
+nav > ul>li>ul>li:hover a {
+
+	background: rgb(0, 0, 0, 0.2);
+	width:100%;
+	display:block;
+	border-left:solid 1px #333;
+}
+
+/** bouton menu fermer **/
+nav [type="submit"],
+nav button {
+	cursor: pointer;
+	padding: 0;
+	font-family: inherit;
+	background: none;
+	border: none;
+	border-radius: 0;
+	-webkit-appearance: none;
+	border: 1px solid #47362C;
+	display: none;
+	z-index: 20;
+}
+
+.btn-menu {
+	min-width: 70px;
+	padding: 8px 10px 4px;
+	color: #47362C;
+	font-size: .8rem;
+	text-transform: uppercase;
+	background: #fff;
+	transition: color 0.2s, background 0.3s;
+
+	position: fixed;
+	top: 0;
+	right: 0px;
+	z-index: 1;
+	display: none;
+	/*grand Ã©cran*/
+}
+
+.btn-menu:hover .btn-menu-icon span {
+	/*transform: translateX(5px);
+	transition: transform 0.3s, opacity 0.3s;*/
+	border: 0;
+}
+
+.btn-menu[aria-expanded="true"] {
+	color: #191918;
+	color: #323230;
+	background: #fff;
+	transition: color 0.2s, background 0.3s
+}
+
+.btn-menu[aria-expanded="true"] .btn-menu-icon span {
+	opacity: 0;
+	/*transform: translateX(30px);
+	transition: transform 0.3s, opacity 0.3s*/
+}
+
+.btn-menu[aria-expanded="true"] .btn-menu-icon:before {
+	top: 50%;
+	background: #47362C;
+	transform: rotate(-45deg);
+	transition: background 0.3s, transform 0.3s, top 0.3s
+}
+
+.btn-menu[aria-expanded="true"] .btn-menu-icon:after {
+	top: 50%;
+	background: #47362C;
+	transform: rotate(45deg);
+	transition: background 0.3s, transform 0.3s, top 0.3s
+}
+
+.btn-menu[aria-expanded="true"] .btn-menu-label {
+	display: none;
+}
+
+.btn-menu[aria-expanded="true"] .btn-menu-label:last-of-type {
+	display: block;
+}
+
+.btn-menu-label {
+	display: block
+}
+
+.btn-menu-label:last-of-type {
+	display: none
+}
+
+.btn-menu-icon {
+	position: relative;
+	display: block;
+	width: 22px;
+	height: 14px;
+	margin: 0 auto 5px
+}
+
+.btn-menu-icon span {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	top: 6px;
+	background: #47362C;
+	transition: transform 0.3s, opacity 0.3s
+}
+
+.btn-menu-icon:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	top: 0;
+	background: #47362C;
+	transition: background 0.3s, top 0.3s, transform 0.3s
+}
+
+.btn-menu-icon:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	top: 12px;
+	background: #47362C;
+	transition: background 0.3s, top 0.3s, transform 0.3s
+}
+
+/**** modif au scroll
+.navbar {background:transparent}
+.navbar.scroll {background:#FEFEFE;	color: #323230;}***/
+
+a.booking{
+    clear: both;
+    display: inline-block;
+    background: #B3B0AE;
+    text-align: center;
+    margin: auto;
+    color: white !important;
+    text-decoration: none;
+    transition: all ease-out 0.2s;
+    font-weight: bold;
+	border-radius:6px;
+}
+
+a.booking:hover{
+	background-color: transparent;
+	color: #3a2c24 !important;
+}
+
+
+@media screen and (max-width: 1150px) {
+
+	header {
+		padding-top:0;
+	}
+	.navbar {
+		height: auto;
+		height: 0;
+		background-color: transparent;
+		color: #7E7E7E;
+	}
+
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 9;
+		max-width: 100%;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+
+	
+	nav > div > div#titre-menu {
+		display:none;
+	}
+	nav  div#contact_accueil {
+		display:none;
+	}
+	nav  div.menu-langues {
+		font-size:20px;
+	}
+	nav  div.menu-langues a, nav  div.menu-langues span{
+		color: #7E7E7E;
+		margin:auto 10px;
+	}
+
+	nav > ul {
+		margin: 0;
+		display: flex;
+		justify-content: left;
+		flex-flow: column;
+		border: solid 0px white;
+		display: none;
+		width:100%;
+		height: 100vh;
+		background: #f1f1f1;
+	}
+
+	nav  ul  li {
+		font-size: 22px;
+		white-space: nowrap;
+		border: solid 0px white;
+		text-align: left;
+		list-style-type: "&#62;";
+		min-width: unset;
+		margin: 6px;
+		width: auto;
+		max-width:none;
+	}
+
+	nav ul li.icones {
+		display: flex;
+		justify-content: center;
+		flex-wrap: nowrap;
+		text-align: center;
+		margin:20px auto;
+	}
+
+	nav ul li.icones a {
+		width: auto;
+		margin:0;
+	}
+
+	nav ul li.icones img {
+		height: 35px;
+		width: auto;
+		display: block;
+		padding:0 8px;
+	}
+
+	nav ul li.icones:hover a {
+		background: transparent;
+	}
+
+
+	nav > ul >  li > a, nav >ul > li h2 {
+		text-decoration: none;
+		display: block;
+		color: #323230 !important;
+		transition: padding 0.2s;
+		padding: 6px 12px;
+		margin-left:5%;
+		width:100%;
+		font-size:28px;
+		background: rgb(0, 0, 0, 0.0);
+		text-align:left;
+	}
+	
+	nav a:hover {
+		border-bottom: solid 1px transparent;
+		color: #191918;
+	}
+
+	.btn-menu {
+		display: block;
+		z-index: 20
+	}
+
+	/** Sous menu mob ***/
+	nav > ul > li > ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin: 0;
+		position:relative;
+		border:0;
+		width:100%;
+		height:auto;
+
+	}
+
+	nav > ul > li:hover > ul {
+		max-height: 500px;
+		border:0;
+		position: relative;
+	}
+
+	nav > ul > li > ul > li {
+		width:auto;
+		display: inline-block;
+		max-width: 150px;
+		margin: 0;
+		border:0;
+		min-width:none;
+	}
+		nav > ul > li > ul > li a{
+		width:100%;
+		padding: 0 6px;
+	}
+	nav>ul>li>ul>li:hover {
+		border:0
+	}
+	nav>ul>li>ul>li a:hover {
+
+	}
+
+	nav>ul>li>ul>li:hover a {
+
+	}
+}
+
+/***** FIN MENU HAMBURGER  ***/
+div.icones-menu {
+	display:block;
+	justify-content: center;
+	flex-wrap: nowrap;
+	text-align: right;
+	margin:auto;
+	position:absolute;
+	top:50px;
+	right:0;
+	width:auto;
+}
+
+div.icones-menu a {
+	width: auto;
+	margin:0;
+}
+
+div.icones-menu img {
+	height: 35px;
+	width: auto;
+	padding:0 4px;
+	transition:0.2s;
+	
+}
+
+div.icones-menu img:hover {
+	transform: scale(1.2);
+}
+
+@media screen and (max-width: 1150px) {
+	div.icones-menu {
+		text-align: left;
+		top:10px;
+		left:0;
+		right:auto;
+	}
+}
+
+div#drapeaux{
+	position:fixed;
+	margin: 8;
+	width:150px;
+	top:10px;
+	right:10px;
+	font-size: 10px;
+	/*border:solid 1px #000000;*/
+}
+body {
+	background-color: #FFFFFF;
+	color: #787878;
+	margin: 0px;
+	padding: 0px;
+	font-family: Ubuntu, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+a {
+	color: #44403E;
+}
+
+h1 {
+	margin: 0;
+}
+h2 {
+	color: #6c6767;
+	font-size: 32px;
+	margin:12px auto;
+	padding:8px 0 12px;
+	font-weight: 300;
+	text-align:center;
+}
+h3 {
+	color: #848484;
+	font-size: 30px;
+	margin:12px;
+	font-weight: 300;
+	/*border:solid 1px red;*/
+	text-align:center;
+}
+h3::before {
+	content:"";
+	width:45px;
+   	height:45px;
+	display:inline-block;
+	background:url(images/coeur-VV.png);
+	position:relative;
+	background-size:100%;
+	top:10px;
+	left:-20px;
+	}
+@media screen and (max-width: 800px) {
+		h4 {margin:20px 12px}
+	}
+
+h4 {font-size:24px;
+	font-weight:400;
+	text-align:left;
+	max-width:800px;
+	margin:20px auto;}
+
+@media screen and (max-width: 800px) {
+	h4 {margin:20px 12px}
+}
+/******* HEADER  ***********/
+header {
+	text-align:center;
+	font-family:  Ubuntu,Tahoma, Verdana, Arial, sans-serif;
+	font-size: 22px;
+	font-weight: normal;
+	color: #7C7C7C;
+	font-variant: normal;
+	letter-spacing: normal;
+	padding-top:40px;
+}
+header img{
+	vertical-align:-25px;
+	border:0;
+}
+header img.coeur{
+	width:50px;
+}
+@media screen and (max-width: 950px) {
+	header img.coeur{
+		width:30px;
+		vertical-align:-15px;
+	}
+	header {
+
+	}
+	header a {
+		display:block;
+	}
+	header .titre{
+		display:inline-block;
+	}
+}
+@media screen and (max-width: 600px) {
+	header .titre{
+		display:block;
+	}
+}
+/********* MAIN  ***************/
+
+.main {
+	background-color: #ffffff;
+	font-family: Ubuntu,Tahoma, Verdana, Arial, sans-serif;
+	max-width: 1100px;
+	margin:auto;
+	/*border:1px solid red;*/
+}
+.main p{
+	text-align:justify;
+	max-width:800px;
+	margin:12px auto;
+}
+@media screen and (max-width: 800px) {
+	.main p {margin:12px}
+}
+
+@media screen and (max-width: 950px) {
+	.chambres {max-width:600px !important;}
+}
+
+/*** Accueil ***/
+#accueil-diapo {
+	width:100%;
+	height:85vh;
+	background-image: url(photos/villa-velleron-2022d.jpg);
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+	display:block;
+}
+
+#accueil-diapo2 {
+	width:100%;
+	height:85vh;
+	background-image: url(photos/accueil-villa-velleron2.jpg);
+	background-repeat:no-repeat;
+	background-position:center center;
+	display:block;
+}
+#accueil-diapo img, #accueil-diapo2 img{
+	width:100%;
+	height:auto;
+}
+@media screen and (max-width: 950px) {
+	#accueil-diapo {
+		height:75vh;
+	}
+}
+.accueil-texte p {
+	max-width:600px;
+	text-align:justify;
+	line-height: 24px;
+	margin:12px auto;
+}
+@media screen and (max-width: 600px) {
+	.accueil-texte p {
+		margin:12px 20px;
+	}
+}
+.accueil-photo  {
+	text-align:center;
+}
+.accueil-photo img {
+	max-width:700px;
+	width:100%;height:auto;
+	margin:40px auto;
+}
+.accueil-photo2 img {
+	width:100%;height:auto;
+	margin:40px auto;
+}
+
+.cadre_lightbox {
+	position: relative;
+	width: 100%;
+	max-width:1200px;
+	margin: 40px  auto;
+	border: solid 0px green;
+	border-spacing: 2px 0px;
+	box-sizing: border-box;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap:10px;
+}
+
+.cadre_lightbox > div {
+	display: inline-block;
+	width:33.3%;
+	max-width:360px;
+	position: relative;
+	height: 100%;
+	border: solid 1px white;
+	overflow: hidden;
+	vertical-align: middle;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.cadre_lightbox > div h3 {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	color: #fff !important;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0));
+	padding-top:2%;
+	padding-bottom: 2%;
+	z-index: 20;
+	font-size: 1.4em;
+	margin: 0;
+	transition: all 0.6s;
+	z-index:0;
+}
+
+.cadre_lightbox>div:hover h3 {
+	background-color: rgba(0, 0, 0, 0);
+	font-size: 1.8em;
+}
+
+.cadre_lightbox>div h3 a {
+	color: white !important;
+	text-decoration: none;
+}
+
+.cadre_lightbox>div h3::before {
+	display:none;
+}
+.cadre_lightbox div img {
+	width: 100%;
+	max-width:350px;
+	height: auto;
+	position: relative;
+	display: block;
+	max-height: 400px;
+	margin: auto;
+}
+
+.cadre_lightbox div:hover img {
+	transform: scale(1.05);
+	filter: brightness(0.8);
+	transition: all 0.6s;
+}
+div.image {text-align:center;padding:10px 0}
+div.image img {max-width:800px;height:auto;margin:auto}
+
+@media screen and (max-width: 950px) {
+	.cadre_lightbox > div {
+		width:auto;
+	}
+}
+/***** page location de la maison ****/
+#maison h3{text-align:left;margin-bottom:0px;margin-top:16px}
+#maison p{margin-top:8px}
+.maison {
+	display:flexbox;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	max-width:100%;
+	border:solid 0px;
+	margin:auto;
+}
+.maison div{
+	width:350px;
+	display:inline-block;
+	margin:auto 4px;
+}
+.maison img{
+	width:100%;
+	height:auto;
+	border:solid 0px;
+}
+.maison div p{
+	margin-top:0px !important;
+	font-size: 13px;
+	border:solid 0px;
+}
+
+/********* FOOTER ***********/
+footer {
+	background-color:#7b6c6a;
+	color:white;
+	padding:12px 0 30px;
+	margin:0;
+}
+footer a {
+	color:inherit;
+}
+footer > div.basdepage {
+	display:flex;
+	justify-content:space-evenly;
+	flex-wrap: wrap;
+}
+footer h3 {
+	margin:6px;padding:0;color: #fff;font-size:1.4em;
+	border:none;text-align:left;
+}
+footer h3::before {
+	background:url(images/coeur-VV5.png);
+	position:relative;
+	background-size:100%;
+	width:35px;
+	height:35px;
+}
+footer  p {
+	margin:12px 6px;
+}
+footer > div.basdepage > div {align-self:flex-start}
+
+footer ul {margin:0;padding-left:10px;list-style: none;}
+footer ul li {font-size:0.9em;color:#ccc;margin-bottom:4px;}
+footer ul li ::before {content: "\25CF"; color: #ccc;margin-right:10px;}
+footer ul li:hover ::before {content: "\25A0"; color: #fff}
+footer ul li a {text-decoration:none;}
+footer ul li a:hover {color:#fff}
+footer div#coordonnees p {margin:12px 6px;}
+footer div#coordonnees p a {}
+
+footer div#credits {
+	border-top:solid 1px #999;
+	width:100%;
+	max-width:90%;
+	margin-top:20px;
+	padding-top:6px;
+}
+footer div#credits p {
+	color: #ddd;
+	text-align:right;
+}
+footer div#credits a {
+	font-size:1em;
+}
+footer p.icones {
+	display: inline-block;
+	border:solid 0px red;
+	width:150px;
+	vertical-align: top;
+}
+
+footer p.icones:hover {
+}
+
+footer p.icones a {
+	width: auto;
+}
+
+footer p.icones img {
+	height: 32px;
+	margin:auto 4px;
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+	transition: 0.2s;
+}
+footer p.icones img:hover {
+	transform: scale(1.5);
+}
+
+footer p.icones2 img {
+	height: 80px;
+	margin:auto 10px auto 0;
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+	transition: 0.2s;
+}
+footer p.icones2 img:hover {
+	transform: scale(1.2);
+}
+footer #drapeaux {width:100%;text-align:center;padding:10px 0;}
+footer #drapeaux img {
+	height: 20px;
+	margin:auto 4px;
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+	transition: 0.2s;
+}
+footer #drapeaux img:hover {
+	transform: scale(1.4);
+}
+
+@media screen and (max-width: 900px) {
+	footer p,footer h3,#drapeaux {text-align:center}
+	footer div#menu-basdepage {display:none}
+	footer p.icones {
+		margin:auto;
+		width:100%;
+	}
+}
+/********* fin FOOTER ***********/
+
+/**************  CHAMBRES  ****************/
+.block {
+	margin:auto;
+	display:inline-block;
+	width:100%;
+	margin:auto;
+	/*border:1px solid red;*/
+	clear:both;
+	padding:30px 0;
+	text-align:center;
+}
+.block > .vignettes {
+	margin:-30px auto 0 auto;
+	text-align:center;
+	position:relative;
+	z-index: 10;
+	max-width:700px;
+	/*border:1px solid red;*/
+}
+.block > .vignettes p{
+	font-size:11px !important;
+	text-align:center;
+	font-style: italic;
+	margin:0px;
+	}
+
+.block > .vignettes img {
+	width:120px;
+	height:80px;
+	/*border:solid 1px #dbd6c3;*/
+	margin:none;
+	border: solid 1px #aaaaaa;
+	margin:2px;
+	z-index:2;
+}
+.block > .vignettes img:hover {
+	cursor:  pointer;
+	transform:  scale(1.1);
+	box-shadow: 1px 1px 2px #555555;
+	}
+.block > .chambre {
+	position:relative;
+}
+.block > .chambre img{
+	display:inline-block;
+	border:solid 0px #fff;
+	width:auto;
+	max-height:85vh;
+}
+.block h3{
+	text-align:center;
+	padding:0;
+}
+p.description-chambre {
+	columns: 2;
+	max-width:700px;
+	margin:10px auto;
+	text-align:left;
+}
+.block ul{
+	text-align:left;
+	max-width:500px;
+	margin:12px auto;
+	padding-left:20px;
+}
+
+@media screen and (max-width: 950px) {
+	.block > .chambre {
+		float:none;
+		max-width:600px !important;
+		/*border:solid 1px red;*/
+	}
+	.block > .chambre img{
+		width:100% !important;
+	}
+	.block > .vignettes {
+		max-width:100%;
+		/*border:1px solid red;*/
+	}
+	.block > .vignettes img{
+		width:80px;
+		height:60px;
+	}
+	.block > .vignettes p{
+		margin-left:6px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.hide {
+		display:none;
+		/*border:solid 1px red;*/
+	}
+	.block > .vignettes {
+		max-width:98%;
+		margin:auto;
+		/*border:1px solid red;*/
+	}
+	.block > .vignettes img{
+		width:100%;
+		height:auto;
+		margin:0;
+	}
+	p.description-chambre {
+		columns: 1;
+		max-width:80%;
+	}
+
+}
+
+div.blockmenu {
+	max-width:900px;
+	margin:auto;
+}
+div.blockmenu div{
+	width:180px;
+	float:left;
+	color:#fff;
+	text-align:center;
+}
+@media screen and (max-width: 950px) {
+	img.banniere{
+		clear:both;
+	}
+	div.blockmenu {
+		width:600px;
+	}
+	div.blockmenu div{
+		width:120px;
+		float:left;
+		color:#fff;
+		text-align:center;
+	}
+}
+div.blockmenu div img{
+	margin:auto;
+	max-width:150px;
+	height:auto;
+}
+
+
+/**** GITE ****/
+.gite {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	gap:4px;
+	width:100%;
+	margin:50px 0;
+}
+.gite > div {
+width: calc(30% - 20px);
+min-width:360px;
+margin: 0;
+background-color: #f1efee;
+text-align: left;
+position: relative;
+}
+.gite div img{
+	width:100%;height:auto;display:block;
+}
+
+.gite div h3 > a {
+	text-decoration: none;
+}
+.gite div h3::before {display:none}
+.gite div p {
+	margin-bottom:12px;
+	padding:0 15px;
+	font-size:16px;
+}
+
+
+/*** Table dhotes ***/
+div.tabledhotes h3 {max-width:800px;margin-left:auto;margin-right:auto;}
+
+
+/*** Tarifs ***/
+body#page-tarifs {}
+body#page-tarifs  table {
+	border-collapse: collapse;
+	font-size:18px;
+	max-width:95%;
+	margin:auto;
+	text-align:left !important;
+}
+body#page-tarifs table tr:nth-child(even)
+{
+
+}
+body#page-tarifs table td, body#page-tarifs table th {
+	padding: 4px 0 4px 8px; 
+	width:25%;
+	text-align:left !important;
+}
+body#page-tarifs  table p {
+	text-align:left !important;
+}
+body#page-tarifs table tr:nth-child(1) {
+
+}
+div#cgv li {
+	margin:6px auto;
+	max-width:750px;
+}
+div#cgv li > p {
+	max-width:none;
+}
+@media screen and (max-width: 600px) {
+	body#page-tarifs  table p {
+		font-size:15px;
+		text-align:left !important;
+	}
+	body#page-tarifs table td, body#page-tarifs table th {
+		padding: 4px 2px;
+		width:23%;
+	}
+	body#page-tarifs table p {
+		margin: 4px 0;
+	}
+}
+/**** RESERVATION ****/
+
+form#reservation {
+	width:auto;
+	max-width: 800px;
+	margin: 10px auto;	padding:0;
+	position: relative;
+	}
+form#reservation fieldset {
+	border:none;
+	max-width:350px;
+	margin:0 auto;padding:0;
+}
+form#reservation input[type="text"],
+form#reservation input[type="email"],
+form#reservation input[type="tel"],
+form#reservation input[type="url"],
+form#reservation textarea,
+form#reservation button[type="submit"] {
+  font: 400 12px/16px ;
+}
+
+
+form#reservation  input[type="text"],
+form#reservation  input[type="email"],
+form#reservation  input[type="tel"],
+form#reservation  input[type="url"],
+form#reservation  textarea,
+form#reservation  select {
+  width: 330px;
+  border: 1px solid #444;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+form#reservation textarea {
+		height: 100px;
+		resize: none;
+		font-family:inherit;
+}
+
+form#reservation input:focus,
+form#reservation textarea:focus {
+  outline: 0;
+  border: 1px solid dodgerblue;
+}
+form#reservation input::placeholder, select {
+	color: #555;
+	font-size:15px;
+  }
+form#reservation input:focus::placeholder, form#reservation textarea:focus::placeholder {
+	color: #aaa;
+  }
+form#reservation  select {
+	width: 350px;
+  }
+  form#reservation  option {
+  padding:12px 0;
+  }
+form#reservation select:invalid,form#reservation select option[value=""], form#reservation select:disabled, form#reservation select:hidden {
+    color: #aaa;
+	font-size:15px;
+}
+/*Added for browser compatibility*/
+[hidden] {
+	display: none;
+  }
+
+form#reservation select option:first-child
+{
+    color: #aaa;
+}
+
+  form#reservation input[type="submit"] {
+	cursor: pointer;
+	width: 350px;
+	border: none;
+	background: #4CAF50;
+	color: #FFF;
+	margin: 0 0 5px;
+	padding: 10px;
+	font-size: 18px;
+	border-radius:6px;
+}
+form#reservation input[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+form#reservation input[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/*** Gallerie ***/
+.galerie {
+	display:flex;
+	justify-content: center;
+	margin:auto;
+	flex-wrap: wrap;
+	max-width:100%;
+	gap:10px;
+}
+.galerie div {
+	margin:4px;
+	max-width:400px;
+}
+.galerie div img{
+	width:100%;
+	height:auto;
+	transition: filter 0.3s;
+}
+.galerie-tabledhotes div img{
+	max-width:300px;
+}
+.galerie div a:hover img{
+	filter: brightness(120%);
+}
+
+
+@media only screen  and (max-width : 750px) {
+	.galerie div {
+		max-width:48%;height:auto;
+	}
+	.galerie {
+		gap:2px;
+	}
+	.galerie div {
+		margin:auto;
+	}
+}
+
+
+/********* MAP **********/
+#map {
+	margin: auto;
+	max-width:800px;
+	width:100%;
+	height:450px;
+	border:1px solid white;
+	box-shadow: 8px 8px 12px #aaa;
+	display:block;
+}
+/*** ANNONCE ****/ 
+.annonce {
+	font-
+	color: #FFB722;
+	font-weight: bold;
+	margin-top: 4px;
+	margin-bottom: 0px;
+	z-index:30;
+
+}
+
+/**** OFFRES ****/
+.offres {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	gap:4px;
+	width:100%;
+}
+.offres > div {
+width: calc(30% - 20px);
+min-width:360px;
+margin: 10px 8px;
+background-color: #f1efee;
+text-align: left;
+position: relative;
+padding-bottom: 20px;
+position: relative;
+}
+.offres div img{
+	width:100%;height:auto;
+}
+.offres div h3 {
+	font-size: 1.5em;
+	font-weight: 500;
+	line-height: 1em;
+	margin: 10px 0;
+	padding:0 15px;
+	text-align:center;
+	color: #44403E;
+}
+.offres div h3 > a {
+	text-decoration: none;
+}
+.offres div h3::before {display:none}
+.offres div p {
+	margin-bottom:12px;
+	padding:0 15px;
+	font-size:16px;
+}
+.offres > div > p:last-child  {
+	margin-bottom:60px;
+	background: red;
+}
+.offres > div > p.date  {
+	font-weight:bold;
+}
+.offres  div.descriptionOffre  {
+	margin-bottom:10px;
+}
+/* Ancien lien vers promo
+.offres div > a {
+	color: #dc3caf;
+	display: block;
+	transition: all ease 250ms 0s;
+	position: absolute;
+	bottom: 20px;
+	left: 25px;
+	background: #dadada;
+	line-height: 46px;
+	width: calc(100% - 50px);
+	margin-top: 60px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.offres div > a:hover {
+	background: #dc3caf;
+	color:white;
+}
+*/
+
+
+/**** Livre d'or ***/
+div.livredor > div {background-color: rgb(248, 223, 215) ;border-radius:16px;padding:20px;margin:20px auto; max-width:800px} 
+
+
+/********* MODIFICATIONS *********/
+#modifications {max-width:1000px;width:auto; margin:auto;text-align:center}
+
+
+
+/*** Pages modif ***/
+body.modif form {display:block;max-width:1200px;margin:auto}
+body.modif input {display:block;}
+body.modif input[type=submit] {padding:5px 10px;font-size:16px;margin:6px;}

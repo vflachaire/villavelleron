@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="robots" content="noindex">
+<title>Modif Villa Velleron - reservation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="../_styles.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="tinymce/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+    plugins: [
+        "advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste autoresize"
+    ],
+   toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect | link unlink anchor | image media | forecolor backcolor | code ",
+   width : 1000,
+   toolbar_items_size: 'small',
+   content_css: 'modif/modif_styles.css',
+   document_base_url: '//www.villavelleron.com/',
+});
+</script>
+</head>
+
+<body class="modif">
+<div> 
+<? include("../_header-fr.htm") ?> 
+<? include ("../_menu-new.php") ?>
+
+  <form method="post" action="<?print($action_form)?>" name="form">
+    <? include ("modif_menu2.htm") ?>
+   <p><strong>&quot;Réservation&quot; en fran&ccedil;ais</strong>
+    <textarea name="champ_1_new"  id="reservationFR"><?print(stripslashes($champ_1))?></textarea>
+      <input name="button" type="submit" id="button1" value="modifier" />
+    </p>
+    <p><strong>&quot;Réservation&quot; en anglais</strong>
+      <textarea name="champ_2_new"   id="reservationEN"><?print(stripslashes($champ_2))?></textarea>
+      <input name="button" type="submit" id="button2" value="modifier" /></p>
+
+      <p><strong>&quot;Réservation&quot; en allemand</strong>
+      <textarea name="champ_3_new"   id="reservationDE"><?print(stripslashes($champ_3))?></textarea>
+            <input name="button" type="submit" id="button3" value="modifier" />
+    </p>
+
+</form>
+        
+<? include ("_menu.php") ?>
+</div>
+</body>
+</html>

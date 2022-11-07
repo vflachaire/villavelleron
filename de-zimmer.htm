@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<title>Besuchen Sie die Gästezimmer der Villa Velleron</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="Besuchen Sie die Villa Velleron, ein charmantes Bed &amp; Breakfast in der Provence, und wählen Sie Ihr Zimmer.">
+<link href="_styles.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://www.villavelleron.com/fr-chambresdhotes" rel="alternate" hreflang="fr" />
+<link href="https://www.villavelleron.com/en-guestrooms" rel="alternate" hreflang="en" />
+
+<script language="javascript" type="text/javascript"> 
+	if (top != self) { 
+		top.location.href = location.href; 
+	} 
+</script>
+<script type="text/javascript" language="JavaScript"> 
+    function affich_Ch_LouSolei(nodiapo) 
+        { 
+            document.Ch_LouSolei.src="photos/chambre-lousouleil" + nodiapo + ".jpg";
+            //alert("photos/ChLou_Solei-" + nodiapo + ".jpg")
+        }
+    function affich_Ch_Luberon(nodiapo) 
+        { 
+            //alert(nochambre + "photos/chambre_" + nodiapo + ".jpg")
+            document.Ch_Luberon.src="photos/chambre-luberon-" + nodiapo + ".jpg";
+        } 
+    function affich_Ch_Naturelle(nodiapo) 
+        { 
+            //alert(nochambre + "photos/chambre_" + nodiapo + ".jpg")
+            document.Ch_Naturelle.src="photos/suite-naturelle-" + nodiapo + ".jpg";
+        } 
+    function affich_Ch_Mezzanine(nodiapo) 
+        { 
+            //alert(nochambre + "photos/chambre_" + nodiapo + ".jpg")
+            document.Ch_Mezzanine.src="photos/chambre-mezzanine" + nodiapo + ".jpg";
+        } 
+    function affich_Ch_BleuBlanc(nodiapo) 
+        { 
+            //alert(nochambre + "photos/chambre_" + nodiapo + ".jpg")
+            document.Ch_BleuBlanc.src="photos/chambre-bleublanc" + nodiapo + ".jpg";
+        } 
+</script>
+<!--#include virtual="_analytics.html"-->
+</head>
+
+<body >
+<!--#include virtual="_menu-new.php"--> 
+<!--#include virtual="_header-de.htm"-->
+<h2>Gästezimmer in der Villa Velleron</h2>
+<div class="blockmenu hide">
+        <div><a href="#LouSoleil"><img src="photos/chambre-lousouleil01.jpg" alt="Zimmer lou Solei Villa Velleron"></a><br><a href="#LouSoleil">lou Solei</a></div>
+        <div><a href="#Luberon"><img src="photos/chambre-luberon-01.jpg" alt="Zimmer Luberon Villa Velleron"></a><br><a href="#Luberon">Luberon</a></div>
+        <div><a href="#Naturelle"><img src="photos/suite-naturelle-01.jpg" alt="Suite Naturelle Villa Velleron"></a><br><a href="#Naturelle">Suite Naturelle</a></div>
+        <div><a href="#Mezzanine"><img src="photos/chambre-mezzanine01.jpg" alt="Zimmer Mezzanine Villa Velleron"></a><a href="#Naturelle"></a><br><a href="#Mezzanine">Mezzanine</a></div>
+        <div><a href="#BleuBlanc"><img src="photos/chambre-bleublanc01.jpg" alt="Zimmer Bleu-Blanc Villa Velleron"></a><br><a href="#BleuBlanc">Bleu Blanc</a><a href="#Naturelle"></a></div>
+</div>
+
+<div class="main chambres">
+ <div class="block" id="LouSoleil">
+    <h3>Gästezimmer lou Solei</h3>
+    <div class="chambre hide">
+	    <img src="photos/chambre-lousouleil01.jpg" alt="Zimmer lou Solei"  name="Ch_LouSolei" class="chambre hide" id="Ch_LouSolei">
+    </div>
+    <div class="vignettes">
+        <img src="photos/chambre-lousouleil01.jpg" onMouseOver="affich_Ch_LouSolei('01')">
+        <img src="photos/chambre-lousouleil02.jpg" onMouseOver="affich_Ch_LouSolei('02')">
+        <p class="survol hide">rollen Sie den Cursor über das Bild, um es zu vergrößern</p>
+    </div>
+    <!--#include virtual="modif2.php?affich=champ_11&page=chambres"-->
+</div>
+
+ <div class="block" id="Luberon">
+    <h3>Gästezimmer Luberon</h3>
+    <div class="chambre hide">
+	    <img src="photos/chambre-luberon-01.jpg" alt="chambres Luberon"  name="Ch_Luberon" class="chambre hide" id="Ch_Luberon">
+    </div>
+    <div class="vignettes">
+        <img src="photos/chambre-luberon-01.jpg" onMouseOver="affich_Ch_Luberon('01')">
+        <img src="photos/chambre-luberon-02.jpg" onMouseOver="affich_Ch_Luberon('02')">
+        <img src="photos/chambre-luberon-03.jpg" onMouseOver="affich_Ch_Luberon('03')">
+        <p class="survol hide">rollen Sie den Cursor über das Bild, um es zu vergrößern</p>
+    </div>
+    <!--#include virtual="modif2.php?affich=champ_12&page=chambres"-->
+</div>
+
+ <div class="block" id="Naturelle">
+    <h3>Suite Naturelle</h3>
+    <div class="chambre hide">
+	    <img src="photos/suite-naturelle-01.jpg" alt="Suite Naturelle"  name="Ch_Naturelle" class="chambre hide"  id="Ch_Naturelle">
+    </div>
+    <div class="vignettes">
+        <img src="photos/suite-naturelle-01.jpg"  onMouseOver="affich_Ch_Naturelle('01')">
+        <img src="photos/suite-naturelle-02.jpg" onMouseOver="affich_Ch_Naturelle('02')">
+        <img src="photos/suite-naturelle-03.jpg"  onMouseOver="affich_Ch_Naturelle('03')">
+        <img src="photos/suite-naturelle-04.jpg" onMouseOver="affich_Ch_Naturelle('04')">
+        <p class="survol hide">rollen Sie den Cursor über das Bild, um es zu vergrößern</p>
+    </div>
+    <!--#include virtual="modif2.php?affich=champ_13&page=chambres"-->
+</div>
+
+
+ <div class="block" id="Mezzanine">
+    <h3>Gästezimmer Mezzanine</h3>
+    <div class="chambre hide">
+	    <img src="photos/chambre-mezzanine01.jpg" alt="chambre Mezzanine"  name="Ch_Mezzanine" class="chambre hide"   id="Ch_Mezzanine">
+    </div>
+    <div class="vignettes">
+        <img src="photos/chambre-mezzanine01.jpg"  onMouseOver="affich_Ch_Mezzanine('01')">
+        <img src="photos/chambre-mezzanine02.jpg"  onMouseOver="affich_Ch_Mezzanine('02')">
+        <img src="photos/chambre-mezzanine03.jpg"  onMouseOver="affich_Ch_Mezzanine('03')">
+        <img src="photos/chambre-mezzanine04.jpg"  onMouseOver="affich_Ch_Mezzanine('04')">
+        <p class="survol hide">rollen Sie den Cursor über das Bild, um es zu vergrößern</p>
+    </div>
+    <!--#include virtual="modif2.php?affich=champ_14&page=chambres"-->
+</div>
+
+<div class="block" id="BleuBlanc">
+    <h3>Gästezimmer Bleu Blanc</h3>
+    <div class="chambre hide">
+	    <img src="photos/chambre-bleublanc01.jpg" alt="chambre Bleu Blanc"  name="Ch_BleuBlanc"    id="Ch_BleuBlanc">
+    </div>
+    <div class="vignettes">
+        <img src="photos/chambre-bleublanc01.jpg"  onMouseOver="affich_Ch_BleuBlanc('01')">
+        <img src="photos/chambre-bleublanc02.jpg"  onMouseOver="affich_Ch_BleuBlanc('02')">
+        <img src="photos/chambre-bleublanc03.jpg"  onMouseOver="affich_Ch_BleuBlanc('03')">
+        <img src="photos/chambre-bleublanc04.jpg"  onMouseOver="affich_Ch_BleuBlanc('04')">
+        <p class="survol hide">rollen Sie den Cursor über das Bild, um es zu vergrößern</p>
+    </div>
+    <!--#include virtual="modif2.php?affich=champ_15&page=chambres"-->
+</div>
+</div>
+
+<!--#include virtual="_footer_de.php"--> 
+
+</body>
+</html>
