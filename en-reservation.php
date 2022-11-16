@@ -190,8 +190,9 @@ if ($button=="envoyer" || $button=="send" || $button=="Abschicken") {
 <? include("_menu-new.php") ?>
 <div class="main">
     <form action="<?php echo $_SERVER['PHP_SELF'] ?>#reservation" method="post" id="reservation">
-		<p>We try to offer you the ideal accommodation for you and your fellow
-        travellers &ndash; that&lsquo;s why an automated reservation system wouldn&lsquo;t work. Based on the details below you can be sure to receive the best offer by mail within short. Please fill out all important details, especially number of adults and children, age of the children and any other important information that we should know to make your holiday the most enjoyable one (e.g. mobility constraints or dietary restrictions).</p>
+	<div class="accueil-texte">
+			<?php include("modif2.reservation.inc.php");print(stripslashes(html_entity_decode($champ_2))); ?>
+		</div>
 
     <? if (!empty($msg)) print(affich_message_mail($msg));?>
     <fieldset>  

@@ -194,7 +194,9 @@ if ($button=="envoyer" || $button=="send" || $button=="Abschicken") {
 <? include("_menu-new.php") ?>
 <div class="main">
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>#reservation" method="post" id="reservation">
-	<p>Wir sind bem&uuml;ht, Ihnen die bestm&ouml;gliche Unterbringung f&uuml;r Sie und Ihre Mitreisenden anzubieten &ndash; und verzichten daher bewusst auf ein automatisches Reservierungssystem. Wir machen Ihnen stattdessen gern pers&ouml;nlich ein ma&szlig;geschneidertes Angebot. Bitte geben Sie uns die n&ouml;tigen Details in der Reservierungsanfrage an, insbesondere Personenanzahl, Alter der Kinder &ndash; und eventuell auch Hinweise zu Mobilit&auml;tseinschr&auml;nkungen oder Di&auml;trestriktionen.</p>
+<div class="accueil-texte">
+			<?php include("modif2.reservation.inc.php");print(stripslashes(html_entity_decode($champ_3))); ?>
+		</div>
 
     <? if (!empty($msg)) print(affich_message_mail($msg));?>
     <fieldset>  
